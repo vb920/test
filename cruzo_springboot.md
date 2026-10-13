@@ -56,7 +56,7 @@ public class ReviewController {
             @RequestBody CreateReviewRequest request) {
         try {
             Review review = reviewService.addReview(carId, request);
-            reviewService.syncCarRating(carId);
+         //   reviewService.syncCarRating(carId);
             Car car = repository.getCar(carId);
             Map<String, Object> response = new LinkedHashMap<>();
             response.put("status", "success");
